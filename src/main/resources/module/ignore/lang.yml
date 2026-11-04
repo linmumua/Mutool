@@ -1,0 +1,45 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 通用消息（原 MumuTools 全局 lang 中本模块用到的文案，内联以保持模块自包含）
+global:
+  only_player: "<#F87171>✖ <gray>该命令只能由玩家执行"
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+  player_not_found: "<#F87171>✖ <gray>玩家 <white>{player} <gray>不存在或从未上线"
+  database_unavailable: "<#F87171>✖ <gray>数据层当前不可用，请稍后再试"
+
+command_info_format: "<#67E8F9>{usage} <dark_gray>» <gray>{description}"
+
+commands:
+  ignore:
+    usage: "/{command} <参数>"
+    description: "屏蔽管理"
+    sub_commands:
+      help:
+        usage: "/{command} help"
+        description: "命令帮助"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>屏蔽管理</b></gradient> <dark_gray>· <gray>命令帮助
+          <dark_gray>────────────────────────
+          {help_list}
+          <dark_gray>────────────────────────
+      list:
+        usage: "/{command} list"
+        description: "屏蔽玩家列表"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>屏蔽列表</b></gradient>
+          <dark_gray>────────────────────────
+          <white>{list}
+          <dark_gray>────────────────────────
+      add:
+        usage: "/{command} add <玩家>"
+        description: "增加屏蔽玩家"
+        have_ignore: "<#F87171>✖ <gray>你已经屏蔽了 <white>{player}"
+        blacklist: "<#F87171>✖ <gray>不能屏蔽 <white>{player}"
+        ignore_self: "<#F87171>✖ <gray>不能屏蔽自己"
+        message: "<#6EE7B7>✔ <gray>已屏蔽 <white>{player}"
+      remove:
+        usage: "/{command} remove <玩家>"
+        description: "移除屏蔽玩家"
+        no_ignore: "<#F87171>✖ <gray>你没有屏蔽 <white>{player}"
+        message: "<#6EE7B7>✔ <gray>已取消屏蔽 <white>{player}"

@@ -1,0 +1,33 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+global:
+  only_player: "<#F87171>✖ <gray>该命令仅玩家可用"
+  no_permission: "<#F87171>✖ <gray>你没有权限执行此操作"
+  usage_error: "<#F87171>✖ <gray>用法: <white>{usage}"
+  player_offline: "<#F87171>✖ <gray>玩家 <white>{player} <gray>不在线"
+  player_not_found: "<#F87171>✖ <gray>未找到玩家 <white>{player}"
+
+chat:
+  delay: "<#FBBF24>⚠ <gray>发言太快了，请 <white>{delay}秒 <gray>后再试"
+  spam: "<#FBBF24>⚠ <gray>请不要重复发送相同的消息"
+  at:
+    all: "全体成员"
+    format: "<#60A5FA>@{target}"
+    title:
+      title: "<#60A5FA>有人提到了你"
+      subtitle: "<white>{by} <gray>@了你"
+      in: 20
+      step: 60
+      out: 20
+
+commands:
+  msg:
+    usage: "/{command} <玩家> <消息>"
+    description: "发送私聊消息"
+    receive: "<#67E8F9>{player} <dark_gray>→ <gray>你 <dark_gray>» <white>{message}"
+    send: "<gray>你 <dark_gray>→ <#67E8F9>{target} <dark_gray>» <white>{message}"
+  reply:
+    usage: "/{command} <消息>"
+    description: "回复私聊消息"
+    no_target: "<#F87171>✖ <gray>没有可以回复的对象"

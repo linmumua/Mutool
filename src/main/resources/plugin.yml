@@ -1,0 +1,6 @@
+name: Mutool
+version: 1.0.0
+main: cn.linmumua.mutool.Mutool
+api-version: '1.21'
+authors: [ linmumua ]
+folia-supported: true

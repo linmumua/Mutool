@@ -1,0 +1,14 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 经济模块
+#
+# 开关
+enable: true
+# 货币名称
+currency: "金币"
+# 命令（顺序固定：查询余额 / 转账 / 经济管理）
+commands:
+  - "money"
+  - "pay"
+  - "moneyadmin"

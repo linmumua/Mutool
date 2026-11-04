@@ -1,0 +1,20 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 通用消息（原 MumuTools 全局 lang 中本模块用到的文案，内联以保持模块自包含）
+global:
+  only_player: "<#F87171>✖ <gray>该命令只能由玩家执行"
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+  usage_error: "<#F87171>✖ <gray>用法错误 <dark_gray>» <#67E8F9>{usage}"
+  player_offline: "<#F87171>✖ <gray>该玩家当前不在线"
+
+commands:
+  ip:
+    usage: "/{command} <玩家>"
+    description: "查询一个玩家的IP信息"
+    message: |-
+      <gradient:#5EEAD4:#60A5FA><b>IP 信息</b></gradient> <dark_gray>· <white>{player}
+      <dark_gray>────────────────────────
+      <gray>IP     <dark_gray>» <white>{ip}
+      <gray>归属地 <dark_gray>» <white>{location}
+      <dark_gray>────────────────────────

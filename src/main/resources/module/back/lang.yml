@@ -1,0 +1,22 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 通用消息（原 MumuTools 全局 lang 中本模块用到的文案，内联以保持模块自包含）
+global:
+  only_player: "<#F87171>✖ <gray>该命令只能由玩家执行"
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+  usage_error: "<#F87171>✖ <gray>用法错误 <dark_gray>» <#67E8F9>{usage}"
+  database_error: "<#F87171>✖ <gray>数据存储暂时不可用，请稍后再试"
+
+commands:
+  back:
+    usage: "/{command} [menu|teleport|death]"
+    description: "返回位置记录"
+    no_location: "<#F87171>✖ <gray>没有可返回的位置记录"
+    world_missing: "<#F87171>✖ <gray>该位置所在世界 <white>{world} <gray>未加载"
+    respawn_message: "<gray>输入 <#67E8F9>/back <gray>返回死亡地点"
+    open_menu_message: "<gray>已打开位置记录列表"
+    message: "<#6EE7B7>✔ <gray>已返回该位置，输入 <#67E8F9>/back <gray>可回到传送前的位置"
+    types:
+      teleport: "传送前的位置"
+      death: "死亡位置"

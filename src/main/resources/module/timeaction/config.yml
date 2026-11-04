@@ -1,0 +1,38 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 时间操作
+#
+# 开关
+enable: true
+# 检查周期(每多少 tick 检查一次, 20 tick = 1 秒)
+period: 20
+# 操作列表
+list:
+  # 自定义命名(仅用于日志/排错)
+  lunch:
+    # 类型
+    # =========================================
+    # 定时操作 ——每多久操作一次(time 为间隔, 时:分:秒)
+    # 定点操作 ——指定时间操作一次(time 为每日时刻, 时:分:秒)
+    # =========================================
+    type: "定点操作"
+    # 时间(时:分:秒)
+    time: "12:0:0"
+    # 操作块列表(沿用 MumuTools 的 "- actions:" 包裹结构, 每个元素为“条件 + 操作”)
+    actions:
+      - # 无条件块：直接执行操作
+        actions:
+          - # 类型(开头带*为必填参数, []内为默认值)
+            # player_command      玩家身份执行命令(*command, op[false], as_console[false])
+            # console_command     后台身份执行命令(*command)
+            # message             发送消息(*message)
+            # broadcast           发送全体消息(*message)
+            # title               发送标题消息(title[""], subtitle[""], in[20], step[70], out[10])
+            # action_bar          发送操作栏消息(*message)
+            # sound               发送音效(*sound, volume[1.0], pitch[1.0])
+            # chat                以玩家身份发送消息(*message)
+            # close               关闭当前界面
+            # delay               延迟(*ticks[20], 可嵌套 actions)
+            type: "broadcast"
+            message: "<#67E8F9>到点了该吃饭了"

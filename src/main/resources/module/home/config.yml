@@ -1,0 +1,16 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 家模块
+#
+# 开关
+enable: true
+
+# 命令（依次为：家 home / 设置家 sethome / 删除家 delhome）
+commands:
+  - "home"
+  - "sethome"
+  - "delhome"
+
+# 每个玩家最多可拥有的家的数量
+max: 5

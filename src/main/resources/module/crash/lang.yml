@@ -1,0 +1,19 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 通用消息（原 MumuTools 全局 lang 中本模块用到的文案，内联以保持模块自包含）
+global:
+  player_offline: "<#F87171>✖ <gray>该玩家不在线"
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+  usage_error: "<#F87171>✖ <gray>用法错误 <dark_gray>» <#67E8F9>{usage}"
+
+commands:
+  crash:
+    usage: "/{command} <玩家> [崩溃类型]"
+    description: "崩溃玩家客户端"
+    no_type: "<#F87171>✖ <gray>不存在该崩端类型"
+    message: "<#FBBF24>⚠ <gray>正在崩溃 <white>{player} <gray>的客户端 <dark_gray>» <#67E8F9>{type}"
+    types:
+      explosion: "爆炸溢出"
+      invalid_teleport: "无效传送"
+      invalid_particle: "异常粒子"

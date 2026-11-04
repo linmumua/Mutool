@@ -1,0 +1,15 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 通用消息（原 MumuTools 全局 lang 中本模块用到的文案，内联以保持模块自包含）
+global:
+  enable: "<#6EE7B7>开启"
+  disable: "<#F87171>关闭"
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+  usage_error: "<#F87171>✖ <gray>用法错误 <dark_gray>» <#67E8F9>{usage}"
+
+commands:
+  fastchangeweather:
+    usage: "/{command} <sun|rain|storm>"
+    description: "快速调节天气"
+    message: "<#6EE7B7>✔ <gray>降雨 {storm}<gray>，雷暴 {thunder}"

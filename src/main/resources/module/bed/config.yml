@@ -1,0 +1,13 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 回到床的位置
+#
+# 开关
+enable: true
+# 命令（第一个为主命令，其余为别名）
+commands:
+  - "bed"
+# 黑名单世界（这些世界中禁止使用 /bed）
+black_world:
+  - "pvp"

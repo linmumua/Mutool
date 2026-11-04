@@ -1,0 +1,59 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 每条命令信息的排版格式：{usage} 为用法，{description} 为描述
+command_info_format: "<#67E8F9>{usage} <dark_gray>» <gray>{description}"
+
+# 通用消息
+global:
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+
+commands:
+  mutool:
+    usage: "/{command} <参数>"
+    description: "主命令"
+    sub_commands:
+      help:
+        usage: "/{command} help"
+        description: "命令帮助"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>Mutool</b></gradient> <dark_gray>· <gray>命令帮助
+          <dark_gray>────────────────────────
+          {help_list}
+          <dark_gray>────────────────────────
+      info:
+        usage: "/{command} info"
+        description: "插件信息"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>Mutool</b></gradient> <dark_gray>· <gray>插件信息
+          <dark_gray>────────────────────────
+          <gray>插件版本 <white>{version}
+          <gray>已启用模块 <white>{load_count}<dark_gray>/<gray>{total_count}
+          <gray>输入 <#67E8F9>/{command} help <gray>查看命令
+          <dark_gray>────────────────────────
+      modules:
+        usage: "/{command} modules"
+        description: "查看所有模块状态"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>Mutool</b></gradient> <dark_gray>· <gray>模块状态
+          <dark_gray>────────────────────────
+          <#6EE7B7>已启用 <dark_gray>» <white>{load_modules}
+          <#F87171>未启用 <dark_gray>» <gray>{unload_modules}
+          <dark_gray>────────────────────────
+      reload:
+        usage: "/{command} reload"
+        description: "重载所有模块"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>Mutool</b></gradient> <dark_gray>· <gray>插件重载
+          <dark_gray>────────────────────────
+          <#6EE7B7>✔ <gray>插件重载完成
+          <dark_gray>────────────────────────
+      feature:
+        usage: "/{command} feature [页码]"
+        description: "功能帮助"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>Mutool</b></gradient> <dark_gray>· <gray>功能帮助
+          <dark_gray>────────────────────────
+          {help_list}
+          <dark_gray>────────────────────────
+          <click:run_command:"/{command} feature {last_page}"><hover:show_text:"<gray>上一页"><#67E8F9>« 上一页</hover></click>  <dark_gray>{page}/{max_page}  <click:run_command:"/{command} feature {next_page}"><hover:show_text:"<gray>下一页"><#67E8F9>下一页 »</hover></click>

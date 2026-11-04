@@ -1,0 +1,51 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 通用消息（原 MumuTools 全局 lang 中本模块用到的文案，内联以保持模块自包含）
+global:
+  only_player: "<#F87171>✖ <gray>该命令只能由玩家执行"
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+  usage_error: "<#F87171>✖ <gray>用法错误 <dark_gray>» <#67E8F9>{usage}"
+  player_not_found: "<#F87171>✖ <gray>找不到该玩家"
+  database_error: "<#F87171>✖ <gray>操作失败，请稍后再试"
+
+command_info_format: "<#67E8F9>{usage} <dark_gray>» <gray>{description}"
+
+commands:
+  money:
+    usage: "/{command} [玩家]"
+    description: "查询余额"
+    message: "<white>{player} <gray>的余额 <dark_gray>» <#67E8F9>{amount}"
+  pay:
+    usage: "/{command} <玩家> <金额>"
+    description: "转账"
+    pay_self: "<#F87171>✖ <gray>不能给自己转账"
+    money_format_error: "<#F87171>✖ <gray>金额必须是数字"
+    no_money: "<#F87171>✖ <gray>余额不足"
+    message: "<#6EE7B7>✔ <gray>已向 <white>{player} <gray>转账 <#67E8F9>{amount}"
+    received_message: "<#6EE7B7>✔ <white>{player} <gray>向你转账 <#67E8F9>{amount}"
+  moneyadmin:
+    usage: "/{command} <参数>"
+    description: "经济管理"
+    money_format_error: "<#F87171>✖ <gray>金额必须是数字"
+    sub_commands:
+      help:
+        usage: "/{command} help"
+        description: "命令帮助"
+        message: |-
+          <gradient:#5EEAD4:#60A5FA><b>经济管理</b></gradient> <dark_gray>· <gray>命令帮助
+          <dark_gray>────────────────────────
+          {help_list}
+          <dark_gray>────────────────────────
+      set:
+        usage: "/{command} set <玩家> <金额>"
+        description: "设置经济"
+        message: "<#6EE7B7>✔ <white>{player} <gray>的余额已设为 <#67E8F9>{amount}"
+      add:
+        usage: "/{command} add <玩家> <金额>"
+        description: "增加经济"
+        message: "<#6EE7B7>✔ <white>{player} <gray>的余额 <#6EE7B7>+{change}<gray>，当前 <#67E8F9>{amount}"
+      take:
+        usage: "/{command} take <玩家> <金额>"
+        description: "扣除经济"
+        message: "<#6EE7B7>✔ <white>{player} <gray>的余额 <#F87171>-{change}<gray>，当前 <#67E8F9>{amount}"

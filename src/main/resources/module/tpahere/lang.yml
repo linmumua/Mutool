@@ -1,0 +1,36 @@
+# 配置文件版本号(请勿修改)
+config_version: "1.0.0"
+
+# 通用消息（原 MumuTools 全局 lang 中本模块用到的文案，内联以保持模块自包含）
+global:
+  only_player: "<#F87171>✖ <gray>该命令只能由玩家执行"
+  no_permission: "<#F87171>✖ <gray>你没有权限这么做"
+  usage_error: "<#F87171>✖ <gray>用法错误 <dark_gray>» <#67E8F9>{usage}"
+  player_offline: "<#F87171>✖ <gray>目标玩家不在线"
+  black_world: "<#F87171>✖ <gray>当前世界无法使用传送"
+
+commands:
+  tpahere:
+    usage: "/{command} <目标玩家>"
+    description: "请求指定玩家传送至当前位置"
+    message: "<#6EE7B7>✔ <gray>已向 <white>{player} <gray>发送传送请求"
+    request_message: |-
+      <gradient:#5EEAD4:#60A5FA><b>传送请求</b></gradient>
+      <white>{player} <gray>邀请你传送到他身边
+      <click:run_command:"/tpahere accept {player}"><hover:show_text:"<gray>接受 <white>{player} <gray>的邀请"><#6EE7B7>[接受]</hover></click>  <click:run_command:"/tpahere reject {player}"><hover:show_text:"<gray>拒绝 <white>{player} <gray>的邀请"><#F87171>[拒绝]</hover></click>
+    in_delay: "<#FBBF24>⚠ <gray>传送冷却中，请 <white>{delay}秒 <gray>后再试"
+    no_request: "<#F87171>✖ <white>{player} <gray>没有向你发送传送请求"
+    no_pending_request: "<#F87171>✖ <gray>你没有待处理的传送请求"
+    send_self: "<#F87171>✖ <gray>不能向自己发送传送请求"
+    open_menu: "<#6EE7B7>✔ <gray>已打开传送请求面板"
+    cross_server: "<#FBBF24>⚠ <gray>跨服传送不可用，已降级为同服传送"
+    accept:
+      message: "<#6EE7B7>✔ <gray>已接受 <white>{player} <gray>的传送请求"
+      accepted: "<#6EE7B7>✔ <white>{player} <gray>接受了你的传送请求"
+      degraded: "<#FBBF24>⚠ <white>{player} <gray>接受了你的传送请求，但跨服传送不可用（已降级）"
+    reject:
+      message: "<gray>已拒绝 <white>{player} <gray>的传送请求"
+      rejected: "<#F87171>✖ <white>{player} <gray>拒绝了你的传送请求"
+    delay:
+      message: "<#FBBF24>⚠ <gray>发给 <white>{player} <gray>的传送请求已过期"
+      time_out: "<#FBBF24>⚠ <white>{player} <gray>的传送请求已过期"
